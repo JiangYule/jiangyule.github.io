@@ -55,27 +55,11 @@
     <section>
         <h2>小学的同学们</h2>
         <p>留言版</p>
-        <table id="text-data"></table>
+        <table>
+            
+        </table>
         <p>同学们可以联系我添加留言！</p>
     </section>
-    <script>
-        const excelUrl = 'https://www.jiangyule.cloudns.be/text.xlsx'
-        fetch(excelUrl)
-            .then(Response => Response.arrayBuffer())
-            .then(data => {
-                const workbook = XLSX.read(data, {type:'array '})
-                const sheetname = workbook.SheetNames[0]
-                const sheet = workbook.Sheets[sheetname]
-                const jsonData = XLSX.utils.sheet_to_json(sheet)
-                const table = document.getElementById('text-data');
-                table.innerHTML = ''
-                for (let i = 0; i < jsonData.length; i++) {
-                    const row = table.insertRow(i);
-                    for (let key in jsonData[i]) {
-                        const cell = row.insertCell(key);
-                        cell.textContent = jsonData[i][key];
-                    }
-            })
-    </script>
+    <script></script>
 </body>
 </html>
