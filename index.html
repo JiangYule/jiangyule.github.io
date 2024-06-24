@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>江昱乐的个人网站</title>
+    <script src="vue.global.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,11 +50,14 @@
         </nav>
     </header>
     <section>
-        <h2>欢迎来到我的个人网站！</h2>
-        <p>网站测试中…</p>
-        <p>注意,本站仅供学习使用</p>
+        <div id="main">
+            <h2>{{ indexC.welcome }}</h2>
+            <p>{{ indexC.testing }}</p>
+            <p>{{ indexC.tips }}</p>
+        </div>
+        
     </section>
-    <script>
+    <script src="contents.js">
     </script>
 </body>
 </html>
